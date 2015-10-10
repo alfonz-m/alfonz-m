@@ -1,10 +1,10 @@
 /* Fonts */
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:100,400,300,700);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 // @brand-color: rgb(44, 62, 80);
 // @brand-light-color: lighten(@brand-color, 5%);
-@brand-color: #363B4E;
+@brand-color: #292929;
 @brand-light-color: #203E5F;
 @white-text: rgba(255,255,255,0.95);
 
@@ -32,7 +32,7 @@ body {
     }
 
 	.btn{
-		padding: 16px 20px;
+		padding: 18px 24px;
 		margin: 20px 0;
 		background-color: rgba(0,0,0,0);
 		transition: 0.2s all;
@@ -66,40 +66,49 @@ html {
 }
 	
 nav{
-
 	&.navbar{
 		background-color: @brand-color;
 	}
 
+	.navbar-header a.navbar-brand{
+		font-size: 11pt;
+	}
+
 	&.navbar-default{
+		background-color: @brand-color;
 		border: none;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 9pt;
 
 		.navbar-header a.navbar-brand,
 		.navbar-nav a,
-		.navbar-nav a:hover
+		.navbar-nav li a,
 		{
+			background-color: @brand-color !important;
 			transition: 0.2s all;
-			color: @white-text;	
+			color: @white-text !important;	
 		}
 
-		.navbar-nav a:hover,
-		.navbar-nav>.active>a,
-		.navbar-nav>.active>a:hover{
-			color: @white-text;
-			background-color: rgba(1,1,1,0.2);
+		.navbar-nav li.active a,
+		.navbar-nav li a:hover,
+		.navbar-nav li.active a:hover
+		{
+			background-color: rgba(0,0,0,0.4) !important;
 		}
 	}
 }
 
 p {
 	font-size: 13pt;
+	font-weight: 300;
 }
 
 hr{
 	margin: 40px auto;
 	border-color: #222;
 	border-width: 2px;
-	max-width: 40px;
+	max-width: 25px;
 }
 
 header, section{
@@ -107,6 +116,7 @@ header, section{
 
 	h1{
 		text-align: center;
+		text-transform: uppercase;
 	}
 
 	a.btn{
@@ -116,6 +126,13 @@ header, section{
 	&.dark{
 		background-color: @brand-color;
 		color: @white-text;
+	}
+}
+
+section{
+	h1{
+		font-size: 18pt;
+		letter-spacing: 2px;
 	}
 }
 
@@ -137,11 +154,12 @@ header, section{
 
     img{
 		margin: auto;
-		max-width: 160px;
-		border-radius: 80px;
+		max-width: 120px;
+		border-radius: 60px;
     }
 
 	.intro-text h3{
+		font-size: 16pt;
 		font-weight: 300;
 	}
 }
