@@ -25,7 +25,7 @@
 	src: url('lineto-circular-book.ttf');	
 }
 
-@text-color: #333333;
+@text-color: #222222;
 @brand-color: #48F0E9;
 @black-color: #292929;
 @brand-light-color: #203E5F;
@@ -85,9 +85,9 @@ p {
 }
 
 hr{
-	margin-bottom: 3em;
-	border-color: #333;
-	border-width: 2px;
+	margin-bottom: 5em;
+	border-color: @text-color;
+	border-width: 3px;
 	max-width: 25px;
 }
 
@@ -106,7 +106,8 @@ header, section{
 
 section {
 	a {
-		border-bottom: 1px dotted @text-color;
+		padding-bottom: 3px;
+		border-bottom: 2px solid @text-color;
 	}
 
 	// Social media icons
@@ -150,21 +151,24 @@ section, header {
 
 #intro{
 	h1{
-		font-weight: 300;
-		letter-spacing: -2px;
-		font-size: 48pt;
+		font-weight: 500;
+		font-size: 44px;
+		line-height: 1.4em;
 	}
 
 	.links {
-		margin-top: 1.6em;
+		margin-top: 4em;
 
 		font-size: 16pt;
+		letter-spacing: 1px;
 		font-weight: 300;
+		color: #999;
 
 		a {
 			color: #999;
-			margin-left: 12px;
-			margin-right: 12px;
+			@margin: 30px;
+			margin-left: @margin;
+			margin-right: @margin;
 			border-color: #999;
 
 			&:hover {
@@ -227,9 +231,7 @@ section, header {
 	.modal-content{
 		h1{
 			// text-transform: uppercase;
-			font-weight: 700;
 			font-size: 30pt;
-			letter-spacing: -1px;
 		}
 
 	    -webkit-box-shadow: none;
@@ -270,4 +272,31 @@ footer{
 	background-color: @black-color;
 	text-align: center;
 	font-weight: 300;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+#job-title{
+	color: @text-color;
+	// font-weight: 500;
 }
