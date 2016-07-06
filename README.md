@@ -1,5 +1,5 @@
 # Alfonz Montelibano Portfolio
 
-This is my online portfolio.
+My web development & web design portfolio.
 
-Made with Bootstrap.
+[Link](http://alfonz-m.github.io)
